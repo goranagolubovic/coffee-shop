@@ -1,0 +1,32 @@
+<div
+  class="w-[70%] sm:w-[70%] md:w-[50%] lg:w-[45%] xl:w-[37%] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-100 p-4 rounded-l-[80px] flex"
+>
+  <div class="w-[50%] ml-16 sm:ml-44 md:ml-40 lg:ml-48 xl:ml-48 mt-4">
+    <p class="text-1xl text-brown font-kufam">{{ message }}</p>
+    <br />
+    <p class="text-1xl text-brown font-kufam">
+      {{ "best_regards" | translate }}
+    </p>
+    <br />
+    <br />
+    <p class="text-1xl text-brown font-kufam font-bold">
+      {{ "coffee_shop_team" | translate }}
+    </p>
+  </div>
+  <button
+    class="fixed top-0 right-0 w-16 h-16 bg-no-repeat bg-center bg-contain rounded-full"
+    style="background-image: url('../../../assets/images/cancel.png')"
+    type="button"
+    (click)="onClosePopup()"
+  ></button>
+</div>
+
+<div
+  style="
+    background-image: url('../../../assets/images/cup\ of\ coffee.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+  "
+  class="fixed w-[23%] h-36 xl:h-64 top-1/2 left-[22%] sm:left-[22%] md:left-[31%] lg:left-[34%] xl:left-[39%] transform -translate-x-1/2 -translate-y-1/2 z-50 p-4"
+></div>

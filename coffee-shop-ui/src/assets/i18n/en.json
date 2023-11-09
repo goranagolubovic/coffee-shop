@@ -1,0 +1,29 @@
+{
+    "home":"Home",
+    "shop":"Shop",
+    "contact":"Contact",
+    "language":"Language",
+    "title":"Hello",
+    "home_message_1":"IS ALWAYS A GOOD DAY ...",
+    "home_message_2":"TO START WITH COFFEE",
+    "home_message_3":"Coffee, a popular beverage, has several intriguing effects. It's known to enhance physical performance due to its caffeine content, boosting endurance and strength. Coffee's caffeine also sharpens mental alertness, combating drowsiness and improving concentration. Furthermore, moderate coffee consumption may reduce the risk of diseases such as Parkinson's, type 2 diabetes, and some cancers, thanks to its antioxidant-rich nature. Lastly, coffee's comforting properties can positively impact mood and even reduce the risk of depression.",
+    "days": {
+        "monday": "MONDAY",
+        "tuesday": "TUESDAY",
+        "wednesday": "WEDNESDAY",
+        "thursday": "THURSDAY",
+        "friday": "FRIDAY",
+        "saturday": "SATURDAY",
+        "sunday": "SUNDAY"
+      },
+      "price_per_KG":"Price for 1 kg",
+      "add_to_cart":"ADD TO CART",
+      "name_and_surname":"Name and surname",
+      "email":"Email",
+      "message":"Message",
+      "send":"SEND",
+      "best_regards":"Best regards,",
+      "coffee_shop_team":"COFFEE SHOP TEAM",
+      "notification_message":"Your message has been noticed.You will receive a response at your email address."
+    }
+    

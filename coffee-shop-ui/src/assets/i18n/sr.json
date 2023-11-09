@@ -1,0 +1,31 @@
+{
+    "home":"Početna",
+    "shop":"Prodavnica",
+    "contact":"Kontakt",
+    "language":"Jezik",
+    "title":"Zdravo",
+    "home_message_1":"JE UVIJEK DOBAR DAN ...",
+    "home_message_2":"DA SE ZAPOČNE SA KAFOM",
+    "home_message_3":"Kafa, popularno piće, ima nekoliko zanimljivih efekata. Poznato je da poboljšava fizičke performanse zbog sadržaja kofeina, povećavajući izdržljivost i snagu. Kofein u kafi takođe poboljšava mentalnu budnost, boreći se protiv pospanosti i poboljšavajući koncentraciju. Nadalje, umerena konzumacija kafe može smanjiti rizik od bolesti poput Parkinsonove bolesti, dijabetesa tipa 2 i određenih oblika raka, zahvaljujući njenom bogatstvu antioksidansima. Na kraju, umirujuća svojstva kafe mogu pozitivno uticati na raspoloženje i čak smanjiti rizik od depresije.",
+    "days": {
+        "monday": "PONEDJELJAK",
+        "tuesday": "UTORAK",
+        "wednesday": "SRIJEDA",
+        "thursday": "ČETVRTAK",
+        "friday": "PETAK",
+        "saturday": "SUBOTA",
+        "sunday": "NEDJELJA"
+      },
+      "price_per_KG":"Cijena za 1 kg",
+      "add_to_cart":"DODAJ U KORPU",
+      "name_and_surname":"Ime i prezime",
+      "email":"Email",
+      "message":"Poruka",
+      "send":"POŠALJI",
+      "best_regards":"Sve najbolje,",
+      "coffee_shop_team":"COFFEE SHOP TIM",
+      "notification_message":"Vaša poruka je zabilježena.Dobićete odgovor na Vašu email adresu."
+     
+    
+   
+}

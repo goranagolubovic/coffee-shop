@@ -1,0 +1,12 @@
+<div
+  class="overflow-y-auto max-h-[400px] xl-max-h-[200px] lg:max-h-[600px] sm:max-h-[500px] md:max-h-[600px] w-[99%] flex flex-wrap gap-x-44 gap-y-20 p-20 justify-center"
+>
+  <div *ngFor="let item of products">
+    <app-shop-card
+      imageUrl="{{ item.imageUrl }}"
+      title="{{ item.title }}"
+      description="{{ item.description }}"
+      price="{{ item.price }}"
+    ></app-shop-card>
+  </div>
+</div>
