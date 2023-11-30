@@ -23,6 +23,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { ShopCardComponent } from './components/shop-card/shop-card.component';
+import { ShopCartItemComponent } from './components/shop-cart-item/shop-cart-item.component';
+import { ShopCartComponent } from './pages/shop-cart/shop-cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { PaymentPopupComponent } from './components/payment-popup/payment-popup.component';
+import { AmountPickerComponent } from './components/amount-picker/amount-picker/amount-picker.component';
 
 registerLocaleData(localeSr, "sr")
 @NgModule({
@@ -39,7 +45,11 @@ registerLocaleData(localeSr, "sr")
     ButtonComponent,
     NotificationPopupComponent,
     HomeComponent,
-    ShopCardComponent
+    ShopCardComponent,
+    ShopCartItemComponent,
+    ShopCartComponent,
+    PaymentPopupComponent,
+    AmountPickerComponent
 
   ],
   imports: [
@@ -47,6 +57,7 @@ registerLocaleData(localeSr, "sr")
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: { provide: TranslateLoader, useFactory: httpTranslateLoader, deps: [HttpClient] }
     })

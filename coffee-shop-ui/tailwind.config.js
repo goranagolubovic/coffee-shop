@@ -11,6 +11,8 @@ module.exports = {
       gray: "#d9d9d9",
       lightbrown: "#857773",
       yellowbrown: "rgba(244, 219, 186, 0.6)",
+      slate: "#1e293b",
+      red: "#f87171",
     },
     fontFamily: {
       kufam: "Kufam",

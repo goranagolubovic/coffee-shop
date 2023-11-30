@@ -26,8 +26,10 @@ namespace coffee_shop_backend.Controllers
                     Id = s.Id,
                     Title = s.Title,
                     Description = s.Description,
-                    Price = s.Price,
+                    PricePerKg = s.PricePerKg,
                     ImageUrl = s.ImageUrl,
+                    Amount=s.Amount,
+                    TotalPrice = s.TotalPrice,  
 
                 }
             ).ToListAsync();

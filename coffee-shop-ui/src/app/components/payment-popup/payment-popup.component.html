@@ -1,0 +1,285 @@
+<div
+  class="w-[90%] sm:w-[70%] md:w-[80%] lg:w-[45%] xl:w-[50%] fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white z-100 p-4 rounded-[30px] flex justify-center"
+>
+  <form
+    [formGroup]="formData"
+    (ngSubmit)="onSubmit()"
+    class="w-[100%] flex justify-center items-center flex-col"
+  >
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['nameOfUser'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'nameOfUser' | translate }}"
+        type="text"
+        id="nameOfUser"
+        name="nameOfUser"
+        formControlName="nameOfUser"
+        required
+      ></app-input>
+      <div
+        *ngIf="submitted && f['nameOfUser'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['nameOfUser'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+      </div>
+    </div>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['creditCardNumber'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'creditCardNumber' | translate }}"
+        type="text"
+        id="creditCardNumber"
+        name="creditCardNumber"
+        formControlName="creditCardNumber"
+        required
+      ></app-input>
+      <div
+        *ngIf="submitted && f['creditCardNumber'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['creditCardNumber'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-4 md:gap-12 lg:gap-10 xl:gap-10">
+      <div
+        [class]="
+          'flex text-red font-kufam ' +
+          (submitted && f['cvc2'].errors
+            ? 'mb-0 flex-col'
+            : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+        "
+      >
+        <app-input
+          placeholder="CVV2/CVC2"
+          type="text"
+          id="cvc2"
+          name="cvc2"
+          formControlName="cvc2"
+          required
+          width="w-40 sm:w-44 md:w-56 lg:w-44 xl:w-44"
+        ></app-input>
+        <div
+          *ngIf="submitted && f['cvc2'].errors"
+          class="flex text-red font-kufam"
+        >
+          <div *ngIf="f['cvc2'].errors['required']">
+            {{ "requiredField" | translate }}
+          </div>
+        </div>
+      </div>
+      <div
+        [class]="
+          'flex text-red font-kufam ' +
+          ((submitted && f['month'].errors) || f['year'].errors
+            ? 'mb-0 flex-col'
+            : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+        "
+      >
+        <div>
+          <label class="font-kufam text-1xl text-lightbrown">{{
+            "validUntil" | translate
+          }}</label>
+          <div class="flex">
+            <app-input
+              type="text"
+              id="month"
+              name="month"
+              formControlName="month"
+              width="w-12 lg:w-20 xl:w-20"
+              height="w-12"
+              required
+            ></app-input>
+            <p class="text-lightbrown text-2xl">/</p>
+            <app-input
+              type="text"
+              id="year"
+              name="year"
+              formControlName="year"
+              width="w-12 lg:w-20 xl:w-20"
+              height="w-12"
+              required
+            ></app-input>
+          </div>
+          <div
+            *ngIf="
+              (submitted && f['month'].errors) ||
+              (submitted && f['year'].errors)
+            "
+            class="flex text-red font-kufam"
+          >
+            {{ "requiredField" | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['address'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'address' | translate }}"
+        type="text"
+        id="address"
+        name="address"
+        formControlName="address"
+        required
+      ></app-input>
+      <div
+        *ngIf="submitted && f['address'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['address'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+      </div>
+    </div>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['email'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'email' | translate }}"
+        type="text"
+        id="email"
+        name="email"
+        formControlName="email"
+        required
+      ></app-input>
+      <div
+        *ngIf="submitted && f['email'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['email'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+        <div *ngIf="f['email'].errors['email']">
+          {{ "invalidEmail" | translate }}
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col lg:flex-row xl:flex-row gap-2 md:gap-2 lg:gap-8 xl:gap-8"
+    >
+      <div
+        [class]="
+          'flex text-red font-kufam ' +
+          (submitted && f['country'].errors
+            ? 'mb-0 flex-col'
+            : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+        "
+      >
+        <app-input
+          placeholder="{{ 'country' | translate }}"
+          type="text"
+          id="country"
+          name="country"
+          formControlName="country"
+          required
+          width="md:w-96 lg:w-52 xl:w-52"
+        ></app-input>
+        <div
+          *ngIf="submitted && f['country'].errors"
+          class="flex text-red font-kufam"
+        >
+          <div *ngIf="f['country'].errors['required']">
+            {{ "requiredField" | translate }}
+          </div>
+        </div>
+      </div>
+      <div
+        [class]="
+          'flex text-red font-kufam ' +
+          (submitted && f['postalCode'].errors
+            ? 'mb-0 flex-col'
+            : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+        "
+      >
+        <app-input
+          placeholder="{{ 'postalCode' | translate }}"
+          type="text"
+          id="postalCode"
+          name="postalCode"
+          formControlName="postalCode"
+          required
+          width="lg:w-36 w-36"
+        ></app-input>
+        <div
+          *ngIf="submitted && f['postalCode'].errors"
+          class="flex text-red font-kufam"
+        >
+          <div *ngIf="f['postalCode'].errors['required']">
+            {{ "requiredField" | translate }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['telephone'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-2 mb-2 md:mb-2 lg:mb-2 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'telephone' | translate }}"
+        type="text"
+        id="telephone"
+        name="telephone"
+        formControlName="telephone"
+        required
+      ></app-input>
+      <div
+        *ngIf="submitted && f['telephone'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['telephone'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+      </div>
+    </div>
+    <p *ngIf="showErrorCardDataMessage" class="font-kufam text-red">
+      {{ "invalidCardData" | translate }}
+    </p>
+    <p *ngIf="shoErrorInsufficientFundsMessage" class="font-kufam text-red">
+      {{ "insufficientFunds" | translate }}
+    </p>
+    <div class="flex gap-8">
+      <app-button
+        text="{{ 'confirm' | translate }}"
+        horizontalMargin="8"
+        type="submit"
+      ></app-button>
+      <app-button
+        text="{{ 'cancel' | translate }}"
+        horizontalMargin="8"
+        type="submit"
+        (click)="onCancelPopup()"
+      ></app-button>
+    </div>
+  </form>
+</div>

@@ -4,6 +4,17 @@
     "contact":"Kontakt",
     "language":"Jezik",
     "title":"Zdravo",
+    "total":"UKUPNO",
+    "cancel":"ODUSTANI",
+    "proceedToPayment":"PREĐI NA PLAĆANJE",
+    "creditCardNumber":"Broj kreditne kartice",
+    "nameOfUser":"Ime korisnika",
+    "address":"Adresa",
+    "postalCode":"Poštanski kod",
+    "country":"Država",
+    "telephone":"Telefon",
+    "validUntil":"Vrijedi do",
+    "confirm":"POTVRDI",
     "home_message_1":"JE UVIJEK DOBAR DAN ...",
     "home_message_2":"DA SE ZAPOČNE SA KAFOM",
     "home_message_3":"Kafa, popularno piće, ima nekoliko zanimljivih efekata. Poznato je da poboljšava fizičke performanse zbog sadržaja kofeina, povećavajući izdržljivost i snagu. Kofein u kafi takođe poboljšava mentalnu budnost, boreći se protiv pospanosti i poboljšavajući koncentraciju. Nadalje, umerena konzumacija kafe može smanjiti rizik od bolesti poput Parkinsonove bolesti, dijabetesa tipa 2 i određenih oblika raka, zahvaljujući njenom bogatstvu antioksidansima. Na kraju, umirujuća svojstva kafe mogu pozitivno uticati na raspoloženje i čak smanjiti rizik od depresije.",
@@ -17,6 +28,7 @@
         "sunday": "NEDJELJA"
       },
       "price_per_KG":"Cijena za 1 kg",
+      "amount":"Količina",
       "add_to_cart":"DODAJ U KORPU",
       "name_and_surname":"Ime i prezime",
       "email":"Email",
@@ -24,8 +36,10 @@
       "send":"POŠALJI",
       "best_regards":"Sve najbolje,",
       "coffee_shop_team":"COFFEE SHOP TIM",
-      "notification_message":"Vaša poruka je zabilježena.Dobićete odgovor na Vašu email adresu."
-     
-    
-   
+      "notification_message":"Vaša poruka je zabilježena.Dobićete odgovor na Vašu email adresu.",
+      "purchase_succeed":"Hvala Vam što kupujete naše proizvode. Vaš paket će stići na Vašu adresu u narednih 10 dana.",
+      "invalidCardData":"Nevalidni podaci o kartici",
+      "insufficientFunds":"Nedovoljno sredstava da se kompletira transakcija",
+      "requiredField":"Polje je obavezno",
+      "invalidEmail":"Email nije validan"
 }

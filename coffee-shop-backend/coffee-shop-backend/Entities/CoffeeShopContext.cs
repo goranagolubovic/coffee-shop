@@ -15,16 +15,32 @@ public partial class CoffeeShopContext : DbContext
     {
     }
 
+    public virtual DbSet<Creditcard> Creditcards { get; set; }
+
     public virtual DbSet<Message> Messages { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=student;database=coffee_shop");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Creditcard>(entity =>
+        {
+            entity.HasKey(e => e.CreditCardNumber).HasName("PRIMARY");
+
+            entity.ToTable("creditcard");
+
+            entity.Property(e => e.CreditCardNumber).HasMaxLength(100);
+            entity.Property(e => e.AccountState).HasPrecision(10);
+            entity.Property(e => e.Cvc2)
+                .HasMaxLength(45)
+                .HasColumnName("CVC2");
+            entity.Property(e => e.NameAndSurname).HasMaxLength(45);
+            entity.Property(e => e.ValidUntil).HasMaxLength(45);
+        });
+
         modelBuilder.Entity<Message>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
@@ -43,8 +59,9 @@ public partial class CoffeeShopContext : DbContext
             entity.ToTable("products");
 
             entity.Property(e => e.Description).HasColumnType("text");
-            entity.Property(e => e.Price).HasMaxLength(45);
+            entity.Property(e => e.PricePerKg).HasMaxLength(45);
             entity.Property(e => e.Title).HasMaxLength(45);
+            entity.Property(e => e.TotalPrice).HasMaxLength(45);
         });
 
         OnModelCreatingPartial(modelBuilder);

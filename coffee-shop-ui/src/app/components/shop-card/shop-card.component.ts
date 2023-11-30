@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { ShopCartService } from 'src/app/services/shop-cart/shop-cart.service';
 
 @Component({
   selector: 'app-shop-card',
@@ -6,14 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./shop-card.component.css']
 })
 export class ShopCardComponent implements OnInit {
-  @Input() imageStyle: string = "";
-  @Input() title: string = "";
-  @Input() description: string = "";
-  @Input() price: string = "";
-  @Input() imageUrl: string = "";
-  constructor() { }
+  @Input() product: Product | undefined;
+
+  constructor(private shopCartService: ShopCartService) { }
 
   ngOnInit(): void {
   }
-
+  addItemToCart() {
+    if (this.product !== undefined)
+      this.shopCartService.addToCart(this.product);
+  }
 }

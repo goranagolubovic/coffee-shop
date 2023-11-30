@@ -33,9 +33,24 @@ CREATE TABLE IF NOT EXISTS `coffee_shop`.`Products` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Title` VARCHAR(45) NOT NULL,
   `Description` TEXT NOT NULL,
-  `Price` VARCHAR(45) NOT NULL,
+  `PricePerKg` VARCHAR(45) NOT NULL,
   `ImageUrl` LONGTEXT NOT NULL,
+  `Amount` INT NOT NULL,
+  `TotalPrice` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `coffee_shop`.`CreditCard`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `coffee_shop`.`CreditCard` (
+  `CreditCardNumber` VARCHAR(100) NOT NULL,
+  `NameAndSurname` VARCHAR(45) NOT NULL,
+  `CVC2` VARCHAR(45) NOT NULL,
+  `ValidUntil` VARCHAR(45) NOT NULL,
+  `AccountState` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`CreditCardNumber`))
 ENGINE = InnoDB;
 
 

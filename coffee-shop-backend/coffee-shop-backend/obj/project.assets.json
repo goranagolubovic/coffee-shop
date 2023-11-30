@@ -4587,11 +4587,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\coffee-shop-backend\\coffee-shop-backend\\coffee-shop-backend.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\coffee-shop\\coffee-shop-backend\\coffee-shop-backend\\coffee-shop-backend.csproj",
       "projectName": "coffee-shop-backend",
-      "projectPath": "C:\\Users\\hp\\Desktop\\coffee-shop-backend\\coffee-shop-backend\\coffee-shop-backend.csproj",
+      "projectPath": "C:\\Users\\hp\\Desktop\\coffee-shop\\coffee-shop-backend\\coffee-shop-backend\\coffee-shop-backend.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Desktop\\coffee-shop-backend\\coffee-shop-backend\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\coffee-shop\\coffee-shop-backend\\coffee-shop-backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

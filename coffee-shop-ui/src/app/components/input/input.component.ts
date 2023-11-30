@@ -17,6 +17,8 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   @Input() type: string = 'text';
   @Input() placeholder: string = '';
   @Input() value: string = '';
+  @Input() width: string = "sm:w-72 md:w-96";
+  @Input() height: string = "h-16 sm:h-12 md:h-16";
   textareaValue: string = ""
   constructor() { }
   onChange = (value: string) => { };

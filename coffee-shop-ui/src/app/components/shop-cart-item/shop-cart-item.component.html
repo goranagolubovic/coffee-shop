@@ -1,0 +1,28 @@
+<div
+  class="w-full h-[200px] flex my-[60px] border-b-2 border-yellow justify-between"
+>
+  <div class="h-3/4 flex justify-between w-[100%] xl:w-[90%]">
+    <div
+      class="flex items-center w-[80%] lg:w-[50%] xl:w-[50%] gap-2 xl:gap-10"
+    >
+      <div class="w-1/2">
+        <img src="{{ product?.imageUrl }}" />
+      </div>
+      <p class="font-kranky text-2xl xl:text-3xl">{{ product?.title }}</p>
+    </div>
+    <app-amount-picker
+      class="flex items-center"
+      [(value)]="selectedAmount"
+      (valueChange)="updateItemPrice($event)"
+    ></app-amount-picker>
+    <p class="font-kufam text-2xl flex items-center">
+      {{ product.totalPrice }}
+    </p>
+  </div>
+  <button
+    class="w-16 h-16 bg-no-repeat bg-center bg-contain rounded-full pr-2"
+    style="background-image: url('../../../assets/images/cancel.png')"
+    type="button"
+    (click)="deleteItem()"
+  ></button>
+</div>

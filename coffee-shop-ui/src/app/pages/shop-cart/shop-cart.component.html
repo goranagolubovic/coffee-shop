@@ -1,0 +1,35 @@
+<div
+  class="w-[99%] my-10 max-h-[50vh] sm:max-h-[800px] md:max-h-[500px] lg:max-h-[600px] xl:max-h-[500px] overflow-y-auto"
+>
+  <div *ngIf="products.length > 0">
+    <app-shop-cart-item
+      *ngFor="let product of products"
+      [product]="product"
+      (itemDeleted)="onItemDeleted()"
+    ></app-shop-cart-item>
+    <p class="w-[90%] font-kufam text-4xl text-right">
+      {{ "total" | translate }}:
+    </p>
+    <p class="w-[90%] font-kufam text-4xl text-right">{{ total }} €</p>
+    <div class="w-full flex justify-center">
+      <app-button
+        *ngIf="!showPopup"
+        text="{{ 'proceedToPayment' | translate }}"
+        horizontalMargin="4"
+        type="button"
+        (buttonClick)="openPopup()"
+      ></app-button>
+    </div>
+  </div>
+  <app-payment-popup
+    *ngIf="showPopup"
+    (closePopup)="closePopup()"
+    (cancelPopup)="cancelPopup()"
+    [totalAmount]="total"
+  ></app-payment-popup>
+  <app-notification-popup
+    *ngIf="showNotificationPopup"
+    (closePopup)="closeNotificationPopup()"
+    message="{{ 'purchase_succeed' | translate }}"
+  ></app-notification-popup>
+</div>

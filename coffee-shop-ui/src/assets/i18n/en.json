@@ -4,6 +4,17 @@
     "contact":"Contact",
     "language":"Language",
     "title":"Hello",
+    "total":"TOTAL",
+    "cancel":"CANCEL",
+    "proceedToPayment":"PROCEED TO PAYMENT",
+    "creditCardNumber":"Credit card number",
+    "nameOfUser":"Name of user",
+    "address":"Address",
+    "postalCode":"Postal code",
+    "country":"Country",
+    "telephone":"Telephone",
+    "validUntil":"Valid until",
+    "confirm":"CONFIRM",
     "home_message_1":"IS ALWAYS A GOOD DAY ...",
     "home_message_2":"TO START WITH COFFEE",
     "home_message_3":"Coffee, a popular beverage, has several intriguing effects. It's known to enhance physical performance due to its caffeine content, boosting endurance and strength. Coffee's caffeine also sharpens mental alertness, combating drowsiness and improving concentration. Furthermore, moderate coffee consumption may reduce the risk of diseases such as Parkinson's, type 2 diabetes, and some cancers, thanks to its antioxidant-rich nature. Lastly, coffee's comforting properties can positively impact mood and even reduce the risk of depression.",
@@ -17,6 +28,7 @@
         "sunday": "SUNDAY"
       },
       "price_per_KG":"Price for 1 kg",
+      "amount":"Amount",
       "add_to_cart":"ADD TO CART",
       "name_and_surname":"Name and surname",
       "email":"Email",
@@ -24,6 +36,11 @@
       "send":"SEND",
       "best_regards":"Best regards,",
       "coffee_shop_team":"COFFEE SHOP TEAM",
-      "notification_message":"Your message has been noticed.You will receive a response at your email address."
+      "notification_message":"Your message has been noticed.You will receive a response at your email address.",
+      "purchase_succeed":"Thank you for buying our products. Your package will arrive at your address in next 10 days.",
+      "invalidCardData":"Invalid card data",
+      "insufficientFunds":"Insufficient funds to complete the transaction",
+      "requiredField":"Field is required",
+      "invalidEmail":"Email is invalid"
     }
     

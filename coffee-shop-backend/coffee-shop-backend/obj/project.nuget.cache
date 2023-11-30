@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7cnEMjb9JknHT3MCpLH7kwiDrSID7iEF9kqpUJGtR2sqNOjgau+GrOZcQ2a4GEkzq8Eb3efpSwF2ovJrLty7A==",
+  "dgSpecHash": "fZxcA/HLDoSaLdGbd4pFBlj10Qzk1plCo26XR0skwPmnmKPUhr1aqkwwgG9ug3mL5v4CeQA5JLODZVOqun5xPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hp\\Desktop\\coffee-shop-backend\\coffee-shop-backend\\coffee-shop-backend.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\coffee-shop\\coffee-shop-backend\\coffee-shop-backend\\coffee-shop-backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

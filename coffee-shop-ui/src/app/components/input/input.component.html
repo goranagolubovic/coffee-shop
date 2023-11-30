@@ -1,6 +1,8 @@
 <div>
   <input
-    class="w-56 h-16 sm:w-48 sm:h-12 md:w-96 md:h-16 bg-gray focus:border-gray outline-none flex justify-center text-lightbrown rounded-[10px] text-2xl pl-[10px]"
+    class="font-kufam {{ height }} {{
+      width
+    }} bg-gray focus:border-gray outline-none flex justify-center text-lightbrown rounded-[10px] text-2xl pl-[10px]"
     placeholder="{{ placeholder }}"
     type="{{ type }}"
     *ngIf="placeholder !== 'Message' && placeholder !== 'Poruka'"
@@ -9,7 +11,9 @@
   />
 
   <textarea
-    class="resize-none w-56 h-32 sm:w-48 sm:h-32 md:w-96 md:h-48 bg-gray focus:border-gray outline-none text-lightbrown rounded-[10px] text-2xl pl-[10px]"
+    class="font-kufam resize-none {{ width }}  {{
+      height
+    }} bg-gray focus:border-gray outline-none text-lightbrown rounded-[10px] text-2xl pl-[10px]"
     *ngIf="placeholder === 'Message' || placeholder === 'Poruka'"
     [(ngModel)]="textareaValue"
     placeholder="{{ placeholder }}"

@@ -1,15 +1,17 @@
 export class Product {
-    id: number;
     title: string;
     description: string;
-    price: string;
+    pricePerKg: string;
+    amount: number;
+    totalPrice: string;
     imageUrl: string;
 
-    constructor(id: number, title: string, description: string, price: string, imageUrl: string) {
-        this.id = id;
+    constructor(title: string, description: string, pricePerKg: string, totalPrice: string, amount: number, imageUrl: string) {
         this.title = title;
         this.description = description;
-        this.price = price;
+        this.pricePerKg = pricePerKg;
+        this.totalPrice = totalPrice;
+        this.amount = amount;
         this.imageUrl = imageUrl;
     }
 }

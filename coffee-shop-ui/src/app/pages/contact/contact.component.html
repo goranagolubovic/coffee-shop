@@ -1,32 +1,85 @@
-<div class="overflow-y-auto max-h-[100vh] mr-8">
+<div class="overflow-y-auto mr-8">
   <form
+    [formGroup]="formData"
     (ngSubmit)="onSubmit()"
-    class="bg-yellowbrown mx-auto w-[75%] sm:w-[70%] md:w-[60%] lg:w-[45%] xl:w-[35%] mt-12 md:mt-80 lg:mt-48 xl:mt-12 mb-12 sm:mb-6 md:mb-80 lg:mb-4 xl:mb-4 py-8 rounded-[10px] flex flex-col items-center justify-center sm:gap-6 gap-10 md:gap-12 lg:gap-8 xl:gap-4"
+    class="bg-yellowbrown mx-auto w-[75%] sm:w-[70%] md:w-[60%] lg:w-[45%] xl:w-[35%] mt-12 md:mt-80 lg:mt-48 xl:mt-12 mb-12 sm:mb-6 md:mb-80 lg:mb-4 xl:mb-4 py-8 rounded-[10px] flex flex-col items-center justify-center"
   >
-    <app-input
-      placeholder="{{ 'name_and_surname' | translate }}"
-      type="text"
-      id="name"
-      name="name"
-      [(ngModel)]="formData.name"
-      required
-    ></app-input>
-    <app-input
-      placeholder="{{ 'email' | translate }}"
-      type="text"
-      id="email"
-      name="email"
-      [(ngModel)]="formData.email"
-      required
-    ></app-input>
-    <app-input
-      placeholder="{{ 'message' | translate }}"
-      type="text"
-      id="message"
-      name="message"
-      [(ngModel)]="formData.message"
-      required
-    ></app-input>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['name'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-6 mb-10 md:mb-12 lg:mb-8 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'name_and_surname' | translate }}"
+        type="text"
+        id="name"
+        name="name"
+        formControlName="name"
+        required
+      ></app-input>
+      <div *ngIf="submitted && f['name'].errors">
+        <div *ngIf="f['name'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+      </div>
+    </div>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['email'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-6 mb-10 md:mb-12 lg:mb-8 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'email' | translate }}"
+        type="text"
+        id="email"
+        name="email"
+        formControlName="email"
+        required
+      ></app-input>
+      <div
+        *ngIf="submitted && f['email'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['email'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+        <div *ngIf="f['email'].errors['email']">
+          {{ "invalidEmail" | translate }}
+        </div>
+      </div>
+    </div>
+    <div
+      [class]="
+        'flex text-red font-kufam ' +
+        (submitted && f['message'].errors
+          ? 'mb-0 flex-col'
+          : 'sm:mb-6 mb-10 md:mb-12 lg:mb-8 xl:mb-4')
+      "
+    >
+      <app-input
+        placeholder="{{ 'message' | translate }}"
+        type="text"
+        id="message"
+        name="message"
+        formControlName="message"
+        required
+        height="h-32 sm:h-32 md:h-48"
+      ></app-input>
+      <div
+        *ngIf="submitted && f['message'].errors"
+        class="flex text-red font-kufam"
+      >
+        <div *ngIf="f['message'].errors['required']">
+          {{ "requiredField" | translate }}
+        </div>
+      </div>
+    </div>
     <app-button
       text="{{ 'send' | translate }}"
       horizontalMargin="8"
@@ -34,7 +87,12 @@
     ></app-button>
   </form>
   <app-notification-popup
-    *ngIf="showPopup"
+    *ngIf="
+      showPopup &&
+      !f['message'].errors &&
+      !f['name'].errors &&
+      !f['email'].errors
+    "
     message="{{ 'notification_message' | translate }}"
     (closePopup)="closePopup()"
   ></app-notification-popup>
